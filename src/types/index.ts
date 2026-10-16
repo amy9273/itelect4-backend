@@ -89,3 +89,26 @@ export type NewSubmissionBody = Pick<Submission, "courseCode" | "repoUrl"> & {
   score?: number;
   submittedAt?: string | Date;
 };
+
+// Entity 4: Vet (Public reference resource for Veterinary Clinic)
+export interface Vet {
+  id: number;
+  name: string;
+  email: string;
+  role: "vet";
+  isActive: boolean;
+  specialization?: string;
+}
+
+export type VetDoc = Pick<
+  Vet,
+  "id" | "name" | "email" | "role" | "isActive"
+> & {
+  specialization?: string;
+};
+
+export type PetDoc = Pick<
+  Pet,
+  "id" | "name" | "species" | "breed" | "ownerId"
+>;
+
