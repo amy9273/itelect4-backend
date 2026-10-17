@@ -1,6 +1,13 @@
 # itelect4-backend
 
-Backend REST API for ITELECT4 Session 9 (Node.js, Express, TypeScript, MongoDB Atlas, and JWT authentication).
+Backend REST API for ITELECT4 (Node.js, Express, TypeScript, MongoDB Atlas, and JWT authentication).
+
+## 🚀 Live Deployments
+
+- **Live Backend API**: [https://itelect4-backend-rho.vercel.app/](https://itelect4-backend-rho.vercel.app/)
+  - Health Check: [https://itelect4-backend-rho.vercel.app/api/health](https://itelect4-backend-rho.vercel.app/api/health)
+- **Live Frontend App**: [https://itelect4-project-red.vercel.app/](https://itelect4-project-red.vercel.app/)
+- **Frontend Repository**: [https://github.com/amy9273/itelect4-project](https://github.com/amy9273/itelect4-project)
 
 ## Environment Variables
 
