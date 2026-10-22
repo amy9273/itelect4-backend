@@ -12,6 +12,7 @@ import { vetRouter } from "./routes/vets";
 import { petRouter } from "./routes/pets";
 import { appointmentRouter } from "./routes/appointments";
 import { submissionRouter } from "./routes/submissions";
+import { aiRouter } from "./routes/ai";
 
 export const app = express();
 
@@ -43,6 +44,10 @@ app.use("/api/vets", vetRouter);
 app.use("/api/pets", petRouter);
 app.use("/api/appointments", appointmentRouter);
 app.use("/api/submissions", submissionRouter);
+
+// Session 11: One more router, mounted like the other four
+// Private, rate limited, and the only route that talks to Gemini.
+app.use("/api/ai", aiRouter);
 
 // 404 Handler
 app.use((req: Request, res: Response) => {
