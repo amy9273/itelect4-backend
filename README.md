@@ -1,13 +1,26 @@
 # itelect4-backend
 
-Backend REST API for ITELECT4 (Node.js, Express, TypeScript, MongoDB Atlas, and JWT authentication).
+[![CI](https://github.com/amy9273/itelect4-backend/actions/workflows/ci.yml/badge.svg)](https://github.com/amy9273/itelect4-backend/actions/workflows/ci.yml)
 
-## 🚀 Live Deployments
+Backend REST API for ITELECT4 (Node.js, Express, TypeScript, MongoDB Atlas, and JWT authentication).
 
 - **Live Backend API**: [https://itelect4-backend-rho.vercel.app/](https://itelect4-backend-rho.vercel.app/)
   - Health Check: [https://itelect4-backend-rho.vercel.app/api/health](https://itelect4-backend-rho.vercel.app/api/health)
 - **Live Frontend App**: [https://itelect4-project-red.vercel.app/](https://itelect4-project-red.vercel.app/)
 - **Frontend Repository**: [https://github.com/amy9273/itelect4-project](https://github.com/amy9273/itelect4-project)
+
+## Architecture
+
+```mermaid
+flowchart LR
+  fe["itelect4-project<br/>React + Vite on Vercel"]
+  be["itelect4-backend<br/>Express on Vercel"]
+  db[("MongoDB Atlas")]
+  ai["Gemini API"]
+  fe -- "fetch + Bearer token" --> be
+  be -- "Mongoose" --> db
+  be -- "GEMINI_API_KEY" --> ai
+```
 
 ## Environment Variables
 
