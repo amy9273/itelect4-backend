@@ -9,6 +9,11 @@ vi.mock("../src/config/db", () => ({
   connectDB: async () => {},
 }));
 
+// Ensure JWT_SECRET has a fallback if running in CI without repository secrets configured
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = "test-jwt-secret-key-for-ci-and-testing";
+}
+
 // Generates a valid signed JWT matching the shape created by POST /api/auth/login
 function tokenFor(userId: string): string {
   return jwt.sign({ userId }, process.env.JWT_SECRET!, {
